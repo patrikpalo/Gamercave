@@ -3,33 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Posuň svoje hranie na vyšší level v GAMERCAVE.">
+  <title>GAMERCAVE — Posuň svoje hranie na vyšší level</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <main class="landing" id="uvod">
+    <header class="site-header">
+      <a class="brand" href="#uvod" aria-label="GAMERCAVE, úvodná stránka">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">GAMERCAVE</span>
+      </a>
 
-  <main class="uvitanie">
-    <div class="emoji">👋</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Otvoriť navigáciu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
-    </div>
+      <nav class="site-nav" id="main-nav" aria-label="Hlavná navigácia">
+        <div class="nav-item">
+          <a class="nav-link" href="#rezervacia">REZERVÁCIA</a>
+          <span class="bolt-mark nav-bolt" aria-hidden="true">↯</span>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#cennik">CENNÍK</a>
+          <span class="bolt-mark nav-bolt" aria-hidden="true">↯</span>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#hardware">HARDWARE</a>
+          <span class="bolt-mark nav-bolt" aria-hidden="true">↯</span>
+        </div>
+      </nav>
+    </header>
 
-    <p class="poznamka">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">POSUŇ SVOJE HRANIE NA VYŠŠÍ LEVEL</h1>
+      <div class="hero-image">
+        <img src="docs/uvod.png" alt="Herná miestnosť GAMERCAVE s hernými počítačmi a hráčmi">
+      </div>
+    </section>
   </main>
-
 </body>
 </html>

@@ -1,75 +1,234 @@
-/* Vzhľad štartovej stránky — vrstva CSS (ako stránka vyzerá).
-   Obsah (čo na stránke je) nájdeš v index.html. */
-
 * {
   box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  --black: #000000;
+  --yellow: #ffe600;
+  --white: #f5f5f5;
+  --display-font: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  background: #f8fafc;
-  color: #1e293b;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  line-height: 1.5;
+  background: #252525;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.uvitanie {
-  max-width: 36rem;
+.landing {
+  width: min(calc(100% - 48px), 1280px);
+  min-height: 100vh;
+  margin: 8px auto 0;
+  padding-bottom: 48px;
+  background: var(--black);
+}
+
+.site-header {
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 5px 12px;
+  border: 3px solid var(--yellow);
+}
+
+.brand {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 11px;
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 76px;
+  flex: 0 0 auto;
+  aspect-ratio: 1;
+  background-image: url("docs/uvod.png");
+  background-position: 4.65% 0;
+  background-repeat: no-repeat;
+  background-size: 997.6% 714.3%;
+}
+
+.brand-name {
+  font-family: var(--display-font);
+  font-size: 25px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.bolt-mark {
+  display: grid;
+  width: 19px;
+  height: 20px;
+  place-items: center;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 4vw, 40px);
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: grid;
+  min-width: 94px;
+  min-height: 38px;
+  padding: 0 14px;
+  place-items: center;
+  background: var(--yellow);
+  clip-path: polygon(14% 0, 100% 0, 86% 100%, 0 100%);
+  color: var(--black);
+  font-family: var(--display-font);
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-bolt {
+  position: absolute;
+  top: -9px;
+  right: -2px;
+}
+
+.hero h1 {
+  margin: 20px 12px 18px;
+  color: var(--yellow);
+  font-family: var(--display-font);
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.08;
   text-align: center;
 }
 
-.emoji {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.hero-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 764 / 354;
+  overflow: hidden;
+  background: var(--black);
 }
 
-h1 {
-  font-size: 1.875rem;
-  margin: 0 0 0.75rem;
+.hero-image img {
+  position: absolute;
+  top: -51.4%;
+  left: -3.14%;
+  display: block;
+  width: 109.69%;
+  max-width: none;
+  height: auto;
 }
 
-.podtext {
-  color: #475569;
-  margin: 0 0 1.5rem;
+.menu-toggle {
+  display: none;
 }
 
-.karta {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  padding: 1.25rem;
-  text-align: left;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
 }
 
-.karta-nadpis {
-  font-weight: 600;
-  margin: 0 0 0.5rem;
+@media (max-width: 680px) {
+  .landing {
+    width: calc(100% - 24px);
+    margin-top: 10px;
+  }
+
+  .site-header {
+    min-height: 66px;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 5px 8px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-mark {
+    width: 52px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: grid;
+    width: 42px;
+    height: 40px;
+    align-content: center;
+    justify-items: center;
+    gap: 5px;
+    padding: 0;
+    border: 1px solid var(--yellow);
+    background: transparent;
+    color: var(--yellow);
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 19px;
+    height: 2px;
+    background: currentColor;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 12px 2px 4px;
+  }
+
+  .site-nav.is-open {
+    display: grid;
+  }
+
+  .nav-link {
+    min-width: 0;
+    min-height: 36px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  .nav-bolt {
+    top: -7px;
+    width: 16px;
+    height: 17px;
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    margin-top: 21px;
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
 }
 
-.karta ol {
-  margin: 0;
-  padding-left: 1.25rem;
-}
+@media (max-width: 380px) {
+  .brand-name {
+    font-size: 18px;
+  }
 
-.karta li {
-  margin-bottom: 0.25rem;
-  color: #334155;
-}
-
-.karta code {
-  background: #f1f5f9;
-  padding: 0 0.25rem;
-  border-radius: 0.25rem;
-}
-
-.poznamka {
-  font-size: 0.75rem;
-  color: #94a3b8;
-  margin-top: 1.5rem;
+  .hero h1 {
+    font-size: 28px;
+  }
 }
