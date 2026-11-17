@@ -223,6 +223,69 @@ body {
   transform: translateY(-1px);
 }
 
+.hardware-content {
+  width: min(615px, calc(100% - 32px));
+  margin: 44px auto 0;
+  color: var(--yellow);
+  font-family: var(--display-font);
+  font-style: italic;
+}
+
+.hardware-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hardware-image {
+  min-width: 0;
+  aspect-ratio: 307 / 177;
+  border: 3px solid var(--yellow);
+  background-image: url("docs/hardware.png");
+  background-repeat: no-repeat;
+}
+
+.pc-image {
+  background-position: 16.9% 25.2%;
+}
+
+.monitor-image {
+  background-position: 74.6% 25.2%;
+}
+
+.console-image {
+  background-position: 16.9% 82.6%;
+}
+
+.lounge-image {
+  background-position: 74.6% 82.6%;
+}
+
+.hardware-image {
+  background-size: 276.7% 408.8%;
+}
+
+.hardware-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 8px 0 40px;
+}
+
+.hardware-specs ul {
+  margin: 0;
+  padding-left: 28px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.hardware-specs li::marker {
+  color: var(--white);
+}
+
+.hardware-specs li span {
+  color: var(--white);
+}
+
 .reservation {
   display: flex;
   justify-content: center;
@@ -433,6 +496,21 @@ select:focus-visible {
     min-height: 48px;
     padding: 0 24px;
     font-size: 17px;
+  }
+
+  .hardware-content {
+    width: calc(100% - 24px);
+    margin-top: 30px;
+  }
+
+  .hardware-specs {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .hardware-specs ul {
+    padding-left: 20px;
+    font-size: 12px;
   }
 }
 
