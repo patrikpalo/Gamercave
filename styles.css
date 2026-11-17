@@ -135,6 +135,94 @@ body {
   display: none;
 }
 
+.pricing {
+  width: min(460px, calc(100% - 32px));
+  margin: 20px auto 0;
+  border: 3px solid var(--yellow);
+  color: var(--yellow);
+  font-family: var(--display-font);
+  font-style: italic;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 9px 22px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.pricing-table th {
+  padding-top: 18px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--yellow);
+  font-size: 17px;
+}
+
+.pricing-table th:last-child,
+.pricing-table td:last-child {
+  width: 34%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.pricing-table td {
+  font-size: 17px;
+  line-height: 1.1;
+}
+
+.pricing-table tbody tr:first-child td {
+  padding-top: 14px;
+}
+
+.pricing-table .price-name,
+.pricing-table small {
+  display: block;
+}
+
+.pricing-table small {
+  color: var(--white);
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.pricing-table .price {
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+.pricing-table .price small {
+  display: inline;
+  font-size: 11px;
+}
+
+.pricing-reserve {
+  display: grid;
+  width: max-content;
+  min-height: 52px;
+  margin: 28px auto 0;
+  padding: 0 34px;
+  place-items: center;
+  background: var(--yellow);
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  color: var(--black);
+  font-family: var(--display-font);
+  font-size: 20px;
+  font-style: italic;
+  text-decoration: none;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.pricing-reserve:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
 .reservation {
   display: flex;
   justify-content: center;
@@ -324,6 +412,27 @@ select:focus-visible {
 
   .reservation {
     padding-top: 30px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .pricing-table th {
+    font-size: 15px;
+  }
+
+  .pricing-table td,
+  .pricing-table .price {
+    font-size: 15px;
+  }
+
+  .pricing-reserve {
+    min-height: 48px;
+    padding: 0 24px;
+    font-size: 17px;
   }
 }
 

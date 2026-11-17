@@ -20,7 +20,7 @@ if (menuToggle && mainNavigation) {
 
 const pageViews = document.querySelectorAll("[data-view]");
 const reservationForm = document.querySelector(".reservation-form");
-const reservationLink = document.querySelector('.nav-link[href="#rezervacia"]');
+const pageLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
 function showCurrentView() {
   const requestedView = window.location.hash.slice(1) || "uvod";
@@ -31,13 +31,13 @@ function showCurrentView() {
     view.hidden = view !== activeView;
   });
 
-  if (reservationLink) {
-    if (activeView.id === "rezervacia") {
-      reservationLink.setAttribute("aria-current", "page");
+  pageLinks.forEach((link) => {
+    if (link.hash === `#${activeView.id}`) {
+      link.setAttribute("aria-current", "page");
     } else {
-      reservationLink.removeAttribute("aria-current");
+      link.removeAttribute("aria-current");
     }
-  }
+  });
 }
 
 window.addEventListener("hashchange", showCurrentView);
