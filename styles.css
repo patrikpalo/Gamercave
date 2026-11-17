@@ -131,6 +131,10 @@ body {
   filter: brightness(0.92) contrast(1.04);
 }
 
+.page-view[hidden] {
+  display: none;
+}
+
 .reservation {
   display: flex;
   justify-content: center;
@@ -200,6 +204,40 @@ body {
 .reservation-submit:hover {
   filter: brightness(1.12);
   transform: translateY(-1px);
+}
+
+.confirmation {
+  width: min(270px, calc(100% - 32px));
+  margin: 28px auto 0;
+  color: var(--yellow);
+  font-family: var(--display-font);
+  font-style: italic;
+}
+
+.confirmation-icon {
+  display: block;
+  width: 120px;
+  height: 106px;
+  margin: 0 auto;
+  color: var(--yellow);
+}
+
+.confirmation h1 {
+  margin: 25px 0 0;
+  font-size: 23px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.confirmation-copy {
+  margin-top: 24px;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.18;
+}
+
+.confirmation-copy p {
+  margin: 0 0 24px;
 }
 
 .menu-toggle {

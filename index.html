@@ -10,7 +10,7 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="landing" id="uvod">
+  <main class="landing">
     <header class="site-header">
       <a class="brand" href="#uvod" aria-label="GAMERCAVE, úvodná stránka">
         <span class="brand-mark" aria-hidden="true"></span>
@@ -25,7 +25,7 @@
 
       <nav class="site-nav" id="main-nav" aria-label="Hlavná navigácia">
         <div class="nav-item">
-          <a class="nav-link" href="rezervacia.html">REZERVÁCIA</a>
+          <a class="nav-link" href="#rezervacia">REZERVÁCIA</a>
         </div>
         <div class="nav-item">
           <a class="nav-link" href="#cennik">CENNÍK</a>
@@ -36,10 +36,73 @@
       </nav>
     </header>
 
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero page-view" id="uvod" data-view aria-labelledby="hero-title">
       <h1 id="hero-title">POSUŇ SVOJE HRANIE NA VYŠŠÍ LEVEL</h1>
       <div class="hero-image">
         <img src="docs/uvod.png" alt="Herná miestnosť GAMERCAVE s hernými počítačmi a hráčmi">
+      </div>
+    </section>
+
+    <section class="reservation page-view" id="rezervacia" data-view aria-label="Rezervácia miesta" hidden>
+      <form class="reservation-form">
+        <div class="form-field">
+          <label for="name">MENO A PRIEZVISKO</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="form-field">
+          <label for="email">E-MAIL</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-field">
+          <label for="time">ČAS</label>
+          <select id="time" name="time">
+            <option>10:00 - 12:00</option>
+            <option>12:00 - 14:00</option>
+            <option>14:00 - 16:00</option>
+            <option>16:00 - 18:00</option>
+            <option>18:00 - 20:00</option>
+            <option>20:00 - 22:00</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="zone">ZÓNA/VYBAVENIE</label>
+          <select id="zone" name="zone">
+            <option>PC STANDARD</option>
+            <option>PC PREMIUM</option>
+            <option>KONZOLA</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="guests">POČET OSÔB</label>
+          <select id="guests" name="guests">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+        </div>
+
+        <button class="reservation-submit" type="submit">REZERVOVAŤ</button>
+      </form>
+    </section>
+
+    <section class="confirmation page-view" id="potvrdenie" data-view aria-labelledby="confirmation-title" hidden>
+      <svg class="confirmation-icon" viewBox="0 0 120 106" role="img" aria-label="Úspešne potvrdené">
+        <rect width="120" height="106" rx="20" fill="currentColor"></rect>
+        <path d="M25 51 49 72 94 29" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+      </svg>
+
+      <h1 id="confirmation-title">REZERVÁCIA BOLA ÚSPEŠNÁ!</h1>
+      <div class="confirmation-copy">
+        <p>Tešíme sa na tvoju návštevu v GAMERCAVE.</p>
+        <p>Potvrdenie s detailmi tvojej rezervácie sme ti práve poslali na zadaný e-mail. Ak by si potreboval čokoľvek zmeniť alebo zrušiť, kontaktuj nás.</p>
+        <p>Priprav sa na poriadny herný zážitok!</p>
       </div>
     </section>
   </main>
