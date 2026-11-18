@@ -499,6 +499,21 @@ body {
   font-size: 14px;
 }
 
+.form-field input:autofill {
+  box-shadow: inset 0 0 0 1000px #05040d;
+  color: var(--white);
+  caret-color: var(--white);
+}
+
+.form-field input:-webkit-autofill,
+.form-field input:-webkit-autofill:hover,
+.form-field input:-webkit-autofill:focus,
+.form-field input:-webkit-autofill:active {
+  -webkit-box-shadow: inset 0 0 0 1000px #05040d;
+  -webkit-text-fill-color: var(--white);
+  caret-color: var(--white);
+}
+
 .form-field select {
   padding-right: 2px;
 }
@@ -820,7 +835,28 @@ select:focus-visible {
   }
 
   .confirmation {
+    width: min(620px, 100%);
     padding: 22px 18px;
+  }
+
+  .confirmation-icon {
+    width: 64px;
+    height: 56px;
+  }
+
+  .confirmation h1 {
+    margin-top: 16px;
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .confirmation-copy {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .confirmation-copy p {
+    margin-bottom: 12px;
   }
 }
 
