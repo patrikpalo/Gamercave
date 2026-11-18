@@ -141,17 +141,18 @@
       <form class="reservation-form">
         <div class="form-field">
           <label for="name">MENO A PRIEZVISKO</label>
-          <input id="name" name="name" type="text" autocomplete="name" required>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Napr. Ján Novák" required>
         </div>
 
         <div class="form-field">
           <label for="email">E-MAIL</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="Napr. jan.novak@gmail.com" required>
         </div>
 
         <div class="form-field">
           <label for="time">ČAS</label>
-          <select id="time" name="time">
+          <select id="time" name="time" required>
+            <option value="" selected disabled>Vyberte čas</option>
             <option>10:00 - 12:00</option>
             <option>12:00 - 14:00</option>
             <option>14:00 - 16:00</option>
@@ -164,7 +165,8 @@
 
         <div class="form-field">
           <label for="zone">ZÓNA/VYBAVENIE</label>
-          <select id="zone" name="zone">
+          <select id="zone" name="zone" required>
+            <option value="" selected disabled>Vyberte zónu</option>
             <option>PC STANDARD</option>
             <option>PC VIP</option>
             <option>PLAYSTATION</option>
@@ -176,7 +178,8 @@
 
         <div class="form-field">
           <label for="guests">POČET OSÔB</label>
-          <select id="guests" name="guests">
+          <select id="guests" name="guests" required>
+            <option value="" selected disabled>Vyberte počet</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
