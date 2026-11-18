@@ -170,13 +170,13 @@ body {
 
 .nav-link:hover {
   transform: translateY(-1px);
-  box-shadow: inset 0 0 0 1px var(--cyan), 0 0 12px var(--cyan-glow);
-  color: var(--cyan);
+  box-shadow: inset 0 0 0 1px var(--pink), 0 0 12px rgba(230, 0, 169, 0.16);
+  color: var(--pink);
 }
 
 .nav-link[aria-current="page"] {
-  box-shadow: inset 0 0 0 1px var(--cyan);
-  color: var(--cyan);
+  box-shadow: inset 0 0 0 1px var(--pink);
+  color: var(--pink);
 }
 
 .hero {
@@ -267,7 +267,7 @@ body {
 
 .section-heading {
   margin: 0 0 22px;
-  color: var(--white);
+  color: var(--cyan);
   font-family: var(--display-font);
   font-size: clamp(30px, 4vw, 42px);
   font-style: italic;
@@ -555,7 +555,7 @@ body {
 
 .contact-copy h1 {
   margin: 0 0 18px;
-  color: var(--white);
+  color: var(--cyan);
   font-size: 36px;
 }
 
@@ -714,9 +714,10 @@ select:focus-visible {
     grid-column: 1 / -1;
     grid-row: 2;
     width: 100%;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 8px;
-    padding: 12px 2px 4px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+    padding: 8px;
+    border: 1px solid var(--pink);
   }
 
   .site-nav.is-open {
@@ -728,10 +729,23 @@ select:focus-visible {
   }
 
   .nav-link {
+    justify-content: flex-start;
     min-width: 0;
-    min-height: 36px;
-    padding: 0 8px;
-    font-size: 12px;
+    min-height: 40px;
+    padding: 0 12px;
+    background: transparent;
+    clip-path: none;
+    box-shadow: none;
+    color: var(--pink);
+    font-size: 13px;
+  }
+
+  .nav-link:hover,
+  .nav-link[aria-current="page"] {
+    transform: none;
+    background: rgba(230, 0, 169, 0.1);
+    box-shadow: none;
+    color: var(--pink);
   }
 
   .hero h1 {
@@ -817,10 +831,6 @@ select:focus-visible {
 
   .hero h1 {
     font-size: 36px;
-  }
-
-  .site-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .pricing {
