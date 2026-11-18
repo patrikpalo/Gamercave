@@ -83,25 +83,22 @@ body {
 
 .brand {
   display: inline-flex;
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 1;
   min-width: 0;
   align-items: center;
-  justify-self: center;
+  justify-self: start;
   gap: 11px;
   color: var(--cyan);
   text-decoration: none;
 }
 
 .brand-mark {
+  display: block;
   width: 58px;
+  height: 58px;
   flex: 0 0 auto;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-image: url("docs/uvod.png");
-  background-position: 6.14% 3.68%;
-  background-repeat: no-repeat;
-  background-size: 1495.7% 1071.4%;
+  object-fit: contain;
 }
 
 .brand-name {
@@ -273,15 +270,12 @@ body {
   box-shadow: 12px 12px 0 rgba(230, 0, 169, 0.22), 0 0 32px rgba(33, 230, 242, 0.12);
 }
 
-.hero-image img {
+.hero-illustration {
   position: absolute;
-  top: -51.4%;
-  left: -3.14%;
   display: block;
-  width: 109.69%;
-  max-width: none;
-  height: auto;
-  filter: brightness(0.8) contrast(1.08) saturate(0.88);
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .page-view[hidden] {
