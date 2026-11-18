@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <g fill="none" stroke="#21E6F2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="512" cy="512" r="430" stroke-width="46"/>
+    <path d="m213 655 33-122q4-16 17-28l32-29 16-111q3-14 18-19l49-16 76-87q10-13 26-9l84 16q11 2 21 13l25 29 76 18q14 3 18 18l27 81q3 10 14 19l30 24q11 10 14 26l18 93q2 14 13 23l11 61H706l-29-166q-3-16-20-23l-133-58q-14-6-28 1l-120 62q-14 7-18 23l-36 161Z" stroke-width="28"/>
+  </g>
+  <defs>
+    <mask id="controller-cutouts" maskUnits="userSpaceOnUse">
+      <rect width="1024" height="1024" fill="#fff"/>
+      <path d="M426 526v74m-37-37h74" fill="none" stroke="#000" stroke-linecap="round" stroke-width="22"/>
+      <circle cx="577" cy="522" r="14" fill="#000"/>
+      <circle cx="620" cy="548" r="14" fill="#000"/>
+      <circle cx="534" cy="548" r="14" fill="#000"/>
+      <circle cx="577" cy="574" r="14" fill="#000"/>
+    </mask>
+  </defs>
+  <path d="M386 466c-34 0-51 26-61 61l-30 111c-10 37 25 61 54 38l54-42h218l54 42c29 23 64-1 54-38l-30-111c-10-35-27-61-61-61-34 0-52 18-71 35H457c-19-17-37-35-71-35Z" fill="#21E6F2" mask="url(#controller-cutouts)"/>
+</svg>
