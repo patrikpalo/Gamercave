@@ -76,6 +76,10 @@ body {
   position: relative;
 }
 
+.nav-item-contact {
+  margin-left: clamp(18px, 3vw, 36px);
+}
+
 .nav-link {
   display: grid;
   min-width: 94px;
@@ -357,6 +361,69 @@ body {
   transform: translateY(-1px);
 }
 
+.contact {
+  display: grid;
+  min-height: 420px;
+  place-items: start center;
+  padding: 40px 16px 48px;
+  color: var(--yellow);
+  text-align: center;
+}
+
+.contact-copy {
+  width: min(520px, 100%);
+  font-family: var(--display-font);
+  font-style: italic;
+}
+
+.contact-copy h1 {
+  margin: 0 0 18px;
+  font-size: 36px;
+}
+
+.contact-copy p {
+  margin: 0 auto 28px;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 32px;
+}
+
+.contact-details a {
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  color: var(--yellow);
+}
+
+.about {
+  padding-top: 24px;
+  border-top: 2px solid var(--yellow);
+}
+
+.about h2 {
+  margin: 0 0 18px;
+  font-size: 32px;
+}
+
+.about p {
+  margin: 0 auto 18px;
+}
+
 .confirmation {
   width: min(270px, calc(100% - 32px));
   margin: 28px auto 0;
@@ -451,13 +518,17 @@ select:focus-visible {
   .site-nav {
     display: none;
     width: 100%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 8px;
     padding: 12px 2px 4px;
   }
 
   .site-nav.is-open {
     display: grid;
+  }
+
+  .nav-item-contact {
+    margin-left: 0;
   }
 
   .nav-link {
