@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#080713">
   <meta name="description" content="Posuň svoje hranie na vyšší level v GAMERCAVE.">
   <title>GAMERCAVE — Posuň svoje hranie na vyšší level</title>
   <link rel="stylesheet" href="styles.css">
@@ -46,13 +46,23 @@
     </header>
 
     <section class="hero page-view" id="uvod" data-view aria-labelledby="hero-title">
-      <h1 id="hero-title">POSUŇ SVOJE HRANIE NA VYŠŠÍ LEVEL</h1>
+      <div class="hero-copy">
+        <p class="hero-eyebrow">HERNÁ ZÓNA <span>•</span> GAMERCAVE</p>
+        <h1 id="hero-title">POSUŇ SVOJE <span class="hero-title-accent">HRANIE</span> NA VYŠŠÍ LEVEL</h1>
+        <p class="hero-description">Výkonné herné PC, PlayStation 5 a miesto pre tvoju partiu. Vyber si zónu a rezervuj si svoj herný čas.</p>
+        <a class="hero-action" href="#rezervacia">REZERVOVAŤ MIESTO <span aria-hidden="true">↗</span></a>
+        <div class="hero-status" aria-label="Vybavenie herne">
+          <span><i aria-hidden="true"></i> PC <b>144–240 Hz</b></span>
+          <span><i aria-hidden="true"></i> PLAYSTATION <b>4K</b></span>
+        </div>
+      </div>
       <div class="hero-image">
         <img src="docs/uvod.png" alt="Herná miestnosť GAMERCAVE s hernými počítačmi a hráčmi">
       </div>
     </section>
 
     <section class="pricing page-view" id="cennik" data-view aria-label="Cenník herne" hidden>
+      <h1 class="section-heading">CENNÍK</h1>
       <table class="pricing-table">
         <thead>
           <tr>
@@ -105,6 +115,7 @@
 
     <section class="hardware page-view" id="hardware" data-view aria-label="Hardware herne" hidden>
       <div class="hardware-content">
+        <h1 class="section-heading">VYBAVENIE HERNE</h1>
         <div class="hardware-gallery">
           <div class="hardware-image pc-image" role="img" aria-label="Herný počítač s presklenou bočnicou a osvetlením"></div>
           <div class="hardware-image monitor-image" role="img" aria-label="Herný monitor, klávesnica a myš"></div>
@@ -144,6 +155,11 @@
     </section>
 
     <section class="reservation page-view" id="rezervacia" data-view aria-label="Rezervácia miesta" hidden>
+      <div class="reservation-intro">
+        <p class="hero-eyebrow">TVOJ HERNÝ ČAS</p>
+        <h1 class="section-heading">REZERVUJ SI MIESTO</h1>
+        <p>Vyber si čas, zónu a počet hráčov. Tvoja herná session sa môže začať.</p>
+      </div>
       <form class="reservation-form">
         <div class="form-field">
           <label for="name">MENO A PRIEZVISKO</label>
