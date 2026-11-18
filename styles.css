@@ -127,11 +127,13 @@ body {
 }
 
 .nav-link {
-  display: grid;
+  display: flex;
   min-width: 82px;
   min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   padding: 0 11px;
-  place-items: center;
   background: rgba(5, 4, 13, 0.5);
   clip-path: polygon(14% 0, 100% 0, 86% 100%, 0 100%);
   box-shadow: inset 0 0 0 1px var(--pink);
@@ -143,6 +145,27 @@ body {
   text-decoration: none;
   white-space: nowrap;
   transition: color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.nav-icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.nav-icon-accent {
+  stroke: var(--cyan);
+}
+
+.nav-icon circle.nav-icon-accent {
+  fill: var(--cyan);
+  stroke: none;
 }
 
 .nav-link:hover {
