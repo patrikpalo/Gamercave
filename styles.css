@@ -11,6 +11,7 @@
   --muted: #9996a7;
   --surface: rgba(8, 7, 19, 0.88);
   --display-font: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --body-font: "Roboto Mono", "IBM Plex Mono", monospace;
   --cyan-glow: rgba(33, 230, 242, 0.16);
 }
 
@@ -20,7 +21,7 @@ body {
   min-height: 100vh;
   background: #080713;
   color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
 }
 
 .page-background {
@@ -294,8 +295,7 @@ body {
   background: var(--surface);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
   color: var(--white);
-  font-family: var(--display-font);
-  font-style: italic;
+  font-family: var(--body-font);
 }
 
 .pricing-table {
@@ -388,7 +388,7 @@ body {
   border-left: 1px solid rgba(33, 230, 242, 0.65);
   background: var(--surface);
   color: var(--muted);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
 }
 
 .hardware-content .section-heading {
@@ -495,7 +495,7 @@ body {
   border-radius: 0;
   background: #05040d;
   color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
   font-size: 14px;
 }
 
@@ -577,7 +577,7 @@ body {
 .contact-copy p {
   margin: 0 auto 28px;
   color: var(--muted);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
   font-size: 16px;
   font-style: normal;
   line-height: 1.5;
@@ -594,7 +594,7 @@ body {
 
 .contact-details a {
   color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
   font-size: 18px;
   font-style: normal;
   text-decoration: none;
@@ -653,7 +653,7 @@ body {
 .confirmation-copy {
   margin-top: 18px;
   color: var(--muted);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
   font-size: 16px;
   font-style: normal;
   line-height: 1.55;
