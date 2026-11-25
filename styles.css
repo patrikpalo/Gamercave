@@ -414,6 +414,10 @@ h2 {
 
 .hardware-content .section-heading {
   margin-bottom: 18px;
+  font-family: var(--display-font);
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1;
 }
 
 .hardware {
