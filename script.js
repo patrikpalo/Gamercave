@@ -38,6 +38,10 @@ function showCurrentView() {
       link.removeAttribute("aria-current");
     }
   });
+
+  if (activeView.id === "potvrdenie") {
+    document.querySelector("#confirmation-title")?.focus();
+  }
 }
 
 window.addEventListener("hashchange", showCurrentView);
