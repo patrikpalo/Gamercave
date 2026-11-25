@@ -428,15 +428,15 @@ h2 {
 .hardware-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .hardware-image {
   display: block;
   width: 100%;
   min-width: 0;
-  aspect-ratio: 307 / 177;
+  height: auto;
   border: 1px solid rgba(33, 230, 242, 0.6);
-  object-fit: cover;
 }
 
 .hardware-specs {
@@ -940,5 +940,16 @@ h1[tabindex="-1"]:focus-visible {
 
   .pricing {
     padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hardware-content {
+    width: 100%;
+  }
+
+  .hardware-gallery,
+  .hardware-specs {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
