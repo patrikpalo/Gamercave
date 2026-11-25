@@ -400,9 +400,14 @@ body {
   place-items: center;
 }
 
-.hardware-gallery {
+.hardware-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 16px;
+}
+
+.hardware-item {
+  min-width: 0;
 }
 
 .hardware-image {
@@ -415,17 +420,10 @@ body {
 }
 
 .hardware-specs {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin: 8px 0 40px;
-}
-
-.hardware-specs ul {
-  margin: 0;
-  padding-left: 28px;
+  margin: 8px 0 0;
+  padding-left: 20px;
   font-size: 15px;
-  line-height: 1.2;
+  line-height: 1.45;
 }
 
 .hardware-specs li::marker {
@@ -820,16 +818,6 @@ select:focus-visible {
     padding: 16px;
   }
 
-  .hardware-specs {
-    gap: 8px;
-    margin-bottom: 30px;
-  }
-
-  .hardware-specs ul {
-    padding-left: 20px;
-    font-size: 12px;
-  }
-
   .contact-copy {
     padding: 22px 18px;
   }
@@ -880,13 +868,8 @@ select:focus-visible {
     padding: 16px 14px;
   }
 
-  .hardware-gallery,
-  .hardware-specs {
+  .hardware-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hardware-gallery {
-    gap: 12px;
   }
 
   .hardware-image {
@@ -895,12 +878,11 @@ select:focus-visible {
     object-fit: contain;
   }
 
-  .hardware-specs {
-    gap: 8px;
-    margin-bottom: 26px;
+  .hardware-grid {
+    gap: 24px;
   }
 
-  .hardware-specs ul {
+  .hardware-specs {
     font-size: 14px;
     line-height: 1.45;
   }
