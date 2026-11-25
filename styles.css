@@ -876,8 +876,12 @@ select:focus-visible {
 
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: clamp(30px, 8vw, 44px);
+    font-size: clamp(24px, 8vw, 36px);
     line-height: 1.4;
+  }
+
+  .hero-title-second-line {
+    display: block;
   }
 
   .hardware-content {
