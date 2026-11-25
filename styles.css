@@ -873,3 +873,35 @@ select:focus-visible {
     padding: 12px;
   }
 }
+
+@media (max-width: 600px) {
+  .hardware-content {
+    width: 100%;
+    padding: 16px 14px;
+  }
+
+  .hardware-gallery,
+  .hardware-specs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hardware-gallery {
+    gap: 12px;
+  }
+
+  .hardware-image {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .hardware-specs {
+    gap: 8px;
+    margin-bottom: 26px;
+  }
+
+  .hardware-specs ul {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
